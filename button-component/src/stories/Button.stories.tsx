@@ -7,7 +7,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   argTypes: {
     variant: {
-      options:['primary', 'secondary'],
+      options:['primary', 'secondary', 'critical'],
       control: {
         type: "select"
       }
