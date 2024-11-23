@@ -1,10 +1,10 @@
-import "./Button.css";
+import './Button.css';
 
 interface Props {
   /**
    * The variant of the button
    **/
-  variant: "primary" | "secondary" | "critical";
+  variant: 'primary' | 'secondary' | 'critical';
   /**
    * Children prop
    **/
@@ -19,10 +19,10 @@ interface Props {
   disabled?: boolean;
 }
 
-export default function Button({variant, children, onClick, disabled = false}: Props) {
+export default function Button({ variant, children, onClick, disabled = false }: Props) {
   return (
     <button
-      className={`button ${variant} ${disabled ? "disabled" : ""}`}
+      className={`button ${variant} ${disabled ? 'disabled' : ''}`}
       disabled={disabled}
       onClick={onClick}
     >
