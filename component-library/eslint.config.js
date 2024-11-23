@@ -6,6 +6,10 @@ import prettierConfig from 'eslint-config-prettier';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,
+  prettierConfig,
   {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     languageOptions: {
@@ -17,12 +21,8 @@ export default [
       }
     },
     rules: {
-        'react/react-in-jsx-scope': 'off',
-        'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }]
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }]
     }
-  },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  prettierConfig
+  }
 ];
