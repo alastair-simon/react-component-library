@@ -25,7 +25,7 @@ export default function Button({ variant, children, onClick, disabled = false }:
       className={`button ${variant} ${disabled ? 'disabled' : ''}`}
       disabled={disabled}
       onClick={onClick}
-    >
+      data-testid="button">
       {children}
     </button>
   );
