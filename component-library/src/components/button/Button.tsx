@@ -1,4 +1,4 @@
-import { buttonProps } from '../props/button.prop.ts'
+import { buttonProps } from '../../props/button.prop.ts';
 import './Button.css';
 
 export default function Button({ variant, children, onClick, disabled }: buttonProps) {

@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import Button from './button/Button.tsx';
+import Button from './components/button/Button.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
