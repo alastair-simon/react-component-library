@@ -13,8 +13,7 @@ describe("Button", () => {
   test("The button is disabled", async() => {
     render(<Button variant="primary" disabled>Button</Button>);
     await waitFor(() => {
-      const button = expect(screen.getByTestId('button')).toBeDefined();
-      expect(button).toHaveProperty('disabled');
+      expect(screen.getByTestId('button')).toBeDisabled();
     });
   });
 });
