@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowJs": true,
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
+    "isolatedModules": true,
+    "target": "ESNext"
+  },
+  "include": [
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx",
+    "vitest.setup.ts"
+  ],
+  "exclude": ["node_modules"]
+}
