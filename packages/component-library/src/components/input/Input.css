@@ -1,0 +1,75 @@
+/* Block */
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    border: 1px solid rgb(203, 213, 225);
+    border-radius: 6px;
+    font-family: sans-serif;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+    color: rgb(15, 23, 42);
+}
+
+.input:focus {
+    outline: none;
+    border-color: rgb(14, 103, 255);
+    box-shadow: 0 0 0 3px rgba(14, 103, 255, 0.1);
+}
+
+.input:disabled {
+    background-color: rgb(241, 245, 249);
+    color: rgb(148, 163, 184);
+    cursor: not-allowed;
+}
+
+/* Size modifiers */
+.input--small {
+    padding: 6px 10px;
+    font-size: 0.875em;
+}
+
+.input--medium {
+    padding: 10px 14px;
+    font-size: 1em;
+}
+
+.input--large {
+    padding: 14px 18px;
+    font-size: 1.125em;
+}
+
+/* State modifiers */
+.input--error {
+    border-color: rgb(220, 38, 38);
+}
+
+.input--error:focus {
+    border-color: rgb(220, 38, 38);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Elements */
+.input__label {
+    font-size: 0.875em;
+    font-weight: 500;
+    color: rgb(51, 65, 85);
+    font-family: sans-serif;
+}
+
+.input__error {
+    font-size: 0.875em;
+    color: rgb(220, 38, 38);
+    font-family: sans-serif;
+}
+
+.input__helper {
+    font-size: 0.875em;
+    color: rgb(100, 116, 139);
+    font-family: sans-serif;
+}

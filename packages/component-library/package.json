@@ -3,14 +3,26 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/component-library.cjs",
+  "module": "./dist/component-library.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/component-library.mjs",
+      "require": "./dist/component-library.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/component-library.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -p tsconfig.build.json && vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:types": "tsc --noEmit",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
-    "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest",
