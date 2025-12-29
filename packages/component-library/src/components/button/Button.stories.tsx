@@ -64,6 +64,10 @@ export const Critical: Story = {
 };
 
 export const Sizes: Story = {
+  args: {
+    variant: 'primary'
+  },
+
   render: () => (
     <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
       <Button variant="primary" size="small">

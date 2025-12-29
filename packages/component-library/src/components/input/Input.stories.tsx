@@ -72,6 +72,10 @@ export const WithError: Story = {
 };
 
 export const Sizes: Story = {
+  args: {
+    size: 'small'
+  },
+
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '300px' }}>
       <Input size="small" placeholder="Small input" />
