@@ -1,10 +1,10 @@
-import React from 'react';
+import type { ReactNode, MouseEvent } from 'react';
 
 export interface CardProps {
   /**
    * Children content
    */
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * Additional CSS class name
    */
@@ -12,7 +12,7 @@ export interface CardProps {
   /**
    * Click handler
    */
-  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+  onClick?: (event: MouseEvent<HTMLDivElement>) => void;
   /**
    * Makes the card clickable/interactive
    */

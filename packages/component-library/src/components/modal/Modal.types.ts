@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface ModalProps {
   /**
    * Controls whether the modal is open

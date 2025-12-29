@@ -1,10 +1,9 @@
-import React from 'react';
+import type { ButtonHTMLAttributes, ReactNode, MouseEvent } from 'react';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'critical';
 export type ButtonSize = 'small' | 'medium' | 'large';
 
-export interface ButtonProps
-  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> {
+export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> {
   /**
    * The variant of the button
    **/
@@ -17,11 +16,11 @@ export interface ButtonProps
   /**
    * Children prop
    **/
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * Click handler
    **/
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   /**
    * Controls if the button is disabled
    **/
@@ -33,11 +32,11 @@ export interface ButtonProps
   /**
    * Icon to display before the button text
    **/
-  icon?: React.ReactNode;
+  icon?: ReactNode;
   /**
    * Icon to display after the button text
    **/
-  iconEnd?: React.ReactNode;
+  iconEnd?: ReactNode;
   /**
    * Makes the button full width
    **/

@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from './Modal';
-import { fn } from '@storybook/test';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Modal> = {
@@ -17,9 +16,6 @@ const meta: Meta<typeof Modal> = {
         type: 'boolean'
       }
     }
-  },
-  args: {
-    onClose: fn()
   }
 };
 
@@ -27,15 +23,19 @@ export default meta;
 type Story = StoryObj<typeof Modal>;
 
 export const Default: Story = {
-  args: {
-    isOpen: true,
-    title: 'Modal Title',
-    children: (
-      <div>
-        <p style={{ margin: 0, color: 'rgb(100, 116, 139)' }}>
-          This is a simple modal with a title and content.
-        </p>
-      </div>
-    )
+  render: (args) => {
+    const [isOpen, setIsOpen] = useState(true);
+    return (
+      <>
+        <button onClick={() => setIsOpen(true)}>Open Modal</button>
+        <Modal {...args} isOpen={isOpen} onClose={() => setIsOpen(false)} title="Modal Title">
+          <div>
+            <p style={{ margin: 0, color: 'rgb(100, 116, 139)' }}>
+              This is a simple modal with a title and content.
+            </p>
+          </div>
+        </Modal>
+      </>
+    );
   }
 };
