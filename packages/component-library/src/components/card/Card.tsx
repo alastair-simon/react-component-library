@@ -1,4 +1,4 @@
-import { CardProps } from './Card.types.ts';
+import type { CardProps } from './Card.types';
 import './Card.css';
 
 export function Card({ children, className, onClick, interactive = false, ...rest }: CardProps) {

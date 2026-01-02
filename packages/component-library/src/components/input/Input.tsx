@@ -1,4 +1,4 @@
-import { InputProps } from './Input.types.ts';
+import type { InputProps } from './Input.types';
 import './Input.css';
 
 export function Input({

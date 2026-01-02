@@ -1,4 +1,4 @@
-import { ButtonProps } from './Button.types.ts';
+import type { ButtonProps } from './Button.types';
 import './Button.css';
 
 export function Button({

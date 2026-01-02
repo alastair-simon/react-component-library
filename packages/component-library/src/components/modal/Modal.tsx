@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ModalProps } from './Modal.types.ts';
+import type { ModalProps } from './Modal.types';
 import './Modal.css';
 
 export function Modal({
