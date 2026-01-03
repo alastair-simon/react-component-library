@@ -1,7 +1,7 @@
 import type { InputProps } from './Input.types';
 import './Input.css';
 
-export default function Input({
+export function Input({
   size = 'medium',
   error,
   label,

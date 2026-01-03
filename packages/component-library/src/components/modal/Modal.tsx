@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import type { ModalProps } from './Modal.types';
 import './Modal.css';
 
-export default function Modal({
+export function Modal({
   isOpen,
   onClose,
   title,

@@ -1,7 +1,7 @@
 import type { CardProps } from './Card.types';
 import './Card.css';
 
-export default function Card({
+export function Card({
   children,
   className,
   onClick,
