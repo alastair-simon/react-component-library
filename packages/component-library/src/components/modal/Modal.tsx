@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import type { ModalProps } from './Modal.types';
 import './Modal.css';
 
-export function Modal({
+export default function Modal({
   isOpen,
   onClose,
   title,
@@ -69,5 +69,3 @@ export function Modal({
     </div>
   );
 }
-
-export default Modal;

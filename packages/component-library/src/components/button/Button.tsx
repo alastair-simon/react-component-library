@@ -23,7 +23,6 @@ export function Button({
     }
   };
 
-  // Build BEM class names
   const buttonClasses = [
     'button',
     `button--${variant}`,
