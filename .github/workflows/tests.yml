@@ -1,6 +1,6 @@
 name: Tests
 
-on: push 
+on: push
 
 jobs:
   unit-test:
@@ -9,16 +9,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
+
       - name: Install NodeJS
         uses: actions/setup-node@v4
         with:
           node-version: "18"
 
-      - name: Install dependacies 
-        run: npm ci
+      - name: Install dependacies
+        run: npm install
 
-      - name: run tests  
+      - name: run tests
         run: npm run test
-        
-  
+
+
