@@ -1,4 +1,4 @@
-import Input from './Input';
+import { Input } from './Input';
 import { fn } from '@storybook/test';
 import type { Meta, StoryObj } from '@storybook/react';
 

@@ -1,6 +1,6 @@
 import { describe, expect, test, vi } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
-import Modal from './Modal';
+import { Modal } from './Modal';
 
 describe('Modal', () => {
   test('The modal does not render when isOpen is false', async () => {

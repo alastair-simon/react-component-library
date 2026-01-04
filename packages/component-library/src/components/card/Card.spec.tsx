@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
-import Card from './Card';
+import { Card } from './Card';
 
 describe('Card', () => {
   test('The card renders', async () => {

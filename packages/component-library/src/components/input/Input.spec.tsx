@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
-import Input from './Input';
+import { Input } from './Input';
 
 describe('Input', () => {
   test('The input renders', async () => {

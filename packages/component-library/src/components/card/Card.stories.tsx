@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import { Card } from './Card';
 import { fn } from '@storybook/test';
 import type { Meta, StoryObj } from '@storybook/react';
 

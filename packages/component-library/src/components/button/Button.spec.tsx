@@ -1,8 +1,8 @@
-import { describe, expect, test } from "vitest";
-import { render, screen, waitFor } from "@testing-library/react";
-import Button from "./Button";
+import { describe, expect, test } from 'vitest';
+import { render, screen, waitFor } from '@testing-library/react';
+import { Button } from './Button';
 
-describe("Button", () => {
+describe('Button', () => {
   test('The button renders', async () => {
     render(<Button variant="primary">Button</Button>);
     await waitFor(() => {
@@ -10,12 +10,14 @@ describe("Button", () => {
     });
   });
 
-  test("The button is disabled", async() => {
-    render(<Button variant="primary" disabled>Button</Button>);
+  test('The button is disabled', async () => {
+    render(
+      <Button variant="primary" disabled>
+        Button
+      </Button>
+    );
     await waitFor(() => {
       expect(screen.getByTestId('button')).toBeDisabled();
     });
   });
 });
-
-
