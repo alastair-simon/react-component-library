@@ -16,9 +16,11 @@ jobs:
           node-version: "18"
 
       - name: Install dependacies
+        working-directory: packages/component-library
         run: npm install
 
       - name: run tests
+        working-directory: packages/component-library
         run: npm run test
 
 
