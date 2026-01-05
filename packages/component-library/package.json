@@ -1,7 +1,7 @@
 {
-  "name": "component-library",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@alastairsimon/react-component-library",
+  "version": "1.0.0",
+  "description": "A React component library built with TypeScript",
   "type": "module",
   "main": "./dist/component-library.cjs",
   "module": "./dist/component-library.mjs",
@@ -15,10 +15,25 @@
     "./styles": "./dist/component-library.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
+  "keywords": [
+    "react",
+    "components",
+    "typescript",
+    "ui",
+    "library"
+  ],
+  "author": "alastairsimon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alastairsimon/react-component-library.git"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json && vite build",
+    "prepublishOnly": "npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:types": "tsc --noEmit",
@@ -28,9 +43,9 @@
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",
