@@ -9,9 +9,3 @@ export type { ButtonProps, ButtonVariant, ButtonSize } from './components/button
 export type { InputProps } from './components/input/Input.types';
 export type { CardProps } from './components/card/Card.types';
 export type { ModalProps } from './components/modal/Modal.types';
-
-// CSS (for consumers who want to import styles)
-import './components/button/Button.css';
-import './components/input/Input.css';
-import './components/card/Card.css';
-import './components/modal/Modal.css';

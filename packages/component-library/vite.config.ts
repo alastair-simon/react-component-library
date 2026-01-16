@@ -11,12 +11,13 @@ export default defineConfig({
     })
   ],
   build: {
+    sourcemap: true,
     emptyOutDir: false,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'ComponentLibrary',
-      formats: ['es', 'cjs'],
-      fileName: (format) => `component-library.${format === 'es' ? 'mjs' : 'cjs'}`
+      formats: ['es'],
+      fileName: () => `component-library.mjs`
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
@@ -27,14 +28,20 @@ export default defineConfig({
           'react/jsx-runtime': 'react/jsx-runtime'
         },
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'style.css') {
+          // Renames the default 'style.css' output to 'component-library.css' to match package.json exports
+          const hasCss =
+            assetInfo.names?.some((name) => name.includes('.css') || name.includes('css')) ||
+            assetInfo.originalFileNames?.some((name) => name.endsWith('.css'));
+
+          if (hasCss) {
             return 'component-library.css';
           }
-          return assetInfo.name || 'asset';
+          // For other assets, use default pattern
+          return '[name][extname]';
         }
       }
     },
-    cssCodeSplit: false
+    cssCodeSplit: true
   },
   test: {
     globals: true,

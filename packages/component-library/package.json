@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "A React component library built with TypeScript",
   "type": "module",
-  "main": "./dist/component-library.cjs",
+  "main": "./dist/component-library.mjs",
   "module": "./dist/component-library.mjs",
   "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.css?*"
+  ],
   "exports": {
     ".": {
       "import": "./dist/component-library.mjs",
-      "require": "./dist/component-library.cjs",
       "types": "./dist/index.d.ts"
     },
     "./styles": "./dist/component-library.css"
@@ -44,10 +47,12 @@
     "coverage": "vitest run --coverage"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": ">=18.3.0",
+    "react-dom": ">=18.3.0"
   },
   "devDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "@chromatic-com/storybook": "^3.2.2",
     "@eslint/js": "^9.15.0",
     "@storybook/addon-essentials": "^8.4.5",
