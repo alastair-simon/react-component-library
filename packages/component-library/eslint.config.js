@@ -11,7 +11,11 @@ export default [
   pluginReact.configs.flat.recommended,
   prettierConfig,
   {
+    ignores: ['dist/**', '**/dist/**', 'node_modules/**', '**/node_modules/**']
+  },
+  {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    ignores: ['dist/**', '**/dist/**'],
     languageOptions: {
       globals: { ...globals.browser, ...globals.node }
     },
@@ -22,7 +26,8 @@ export default [
     },
     rules: {
       'react/react-in-jsx-scope': 'off',
-      'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }]
+      'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
+      'react/prop-types': 'off'
     }
   }
 ];
