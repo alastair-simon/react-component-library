@@ -44,7 +44,8 @@ export function Modal({
       role="dialog"
       aria-modal="true"
       aria-labelledby={title ? 'modal-title' : undefined}
-      data-testid="modal-overlay">
+      data-testid="modal-overlay"
+    >
       <div className={modalClasses} onClick={(e) => e.stopPropagation()} data-testid="modal">
         {(title || showCloseButton) && (
           <div className="modal__header">
@@ -58,7 +59,8 @@ export function Modal({
                 className="modal__close"
                 onClick={onClose}
                 aria-label="Close modal"
-                type="button">
+                type="button"
+              >
                 ×
               </button>
             )}

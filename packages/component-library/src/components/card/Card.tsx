@@ -13,7 +13,8 @@ export function Card({ children, className, onClick, interactive = false, ...res
       role={interactive ? 'button' : undefined}
       tabIndex={interactive ? 0 : undefined}
       data-testid="card"
-      {...rest}>
+      {...rest}
+    >
       {children}
     </div>
   );

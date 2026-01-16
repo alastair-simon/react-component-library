@@ -44,14 +44,16 @@ export function Button({
       aria-busy={loading}
       aria-disabled={isDisabled}
       data-testid="button"
-      {...rest}>
+      {...rest}
+    >
       {loading && (
         <span className="button__spinner" aria-hidden="true">
           <svg
             className="button__spinner-icon"
             viewBox="0 0 24 24"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <circle
               className="button__spinner-circle"
               cx="12"
@@ -61,7 +63,8 @@ export function Button({
               strokeWidth="4"
               strokeLinecap="round"
               strokeDasharray="32"
-              strokeDashoffset="32">
+              strokeDashoffset="32"
+            >
               <animate
                 attributeName="stroke-dasharray"
                 dur="2s"
