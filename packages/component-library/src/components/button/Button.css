@@ -6,8 +6,8 @@
   gap: 8px;
   border: none;
   border-radius: 8px;
-  font-weight: 200;
-  font-family: var(--component-library-font-family, 'Inter', sans-serif);
+  font-weight: 400;
+  font-family: var(--component-library-font-family);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   position: relative;

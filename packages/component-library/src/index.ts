@@ -1,6 +1,3 @@
-// Global styles (includes Inter font from Google Fonts)
-import './assets/fonts.css';
-
 // Components
 export { Button } from './components/button/Button';
 export { Input } from './components/input/Input';
