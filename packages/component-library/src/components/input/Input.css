@@ -10,7 +10,7 @@
   width: 100%;
   border: 1px solid rgb(203, 213, 225);
   border-radius: 6px;
-  font-family: sans-serif;
+  font-family: var(--component-library-font-family, 'Inter', sans-serif);
   transition: all 0.2s ease-in-out;
   background-color: white;
   color: rgb(15, 23, 42);
@@ -59,17 +59,17 @@
   font-size: 0.875em;
   font-weight: 500;
   color: rgb(51, 65, 85);
-  font-family: sans-serif;
+  font-family: var(--component-library-font-family, 'Inter', sans-serif);
 }
 
 .input__error {
   font-size: 0.875em;
   color: rgb(220, 38, 38);
-  font-family: sans-serif;
+  font-family: var(--component-library-font-family, 'Inter', sans-serif);
 }
 
 .input__helper {
   font-size: 0.875em;
   color: rgb(100, 116, 139);
-  font-family: sans-serif;
+  font-family: var(--component-library-font-family, 'Inter', sans-serif);
 }
