@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode, MouseEvent } from 'react';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'critical';
+export type ButtonVariant = 'primary' | 'secondary' | 'outline';
 export type ButtonSize = 'small' | 'medium' | 'large';
 
 export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> {
